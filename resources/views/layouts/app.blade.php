@@ -20,11 +20,12 @@
 
     {{-- Content --}}
     @yield('content')
-
+    @include('partials.footer')
     {{-- JS --}}
     <script src="{{ asset('plugins/jquery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     @stack('scripts')
 </body>
+
 
 </html>

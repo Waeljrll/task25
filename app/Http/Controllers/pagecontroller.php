@@ -41,13 +41,16 @@ class pagecontroller extends Controller
     ]
 ];
 
-    return view("home", compact('posts'));
+    return view("/pages/home", compact('posts'));
 }
 
     public function about(){
-        return view("about");
+        return view("/pages/about");
     }
     public function contact(){
-        return view("contact");
+        return view("/pages/contact");
+    }
+    public function category(){
+        return view("/pages/category");
     }
 }
