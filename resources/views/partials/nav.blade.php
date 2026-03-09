@@ -19,18 +19,9 @@
                     <a class="dropdown-item" href="index-6.html">Home 6</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Blog Posts
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="standard-fullwidth.html">Standard Fullwidth</a>
-                    <a class="dropdown-item" href="standard-left-sidebar.html">Standard Left Sidebar</a>
-                    <a class="dropdown-item" href="standard-right-sidebar.html">Standard Right Sidebar</a>
-                </div>
-            </li>
 
+
+            <li class="nav-item"><a href={{ route('posts.index') }} class="nav-link">Posts</a></li>
             <li class="nav-item"><a href={{ route('about') }} class="nav-link">About</a></li>
             <li class="nav-item"><a href={{ route('categories.index') }} class="nav-link">Category</a></li>
             <li class="nav-item dropdown">

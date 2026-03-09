@@ -2,12 +2,17 @@
 
 @section('content')
     <div class="container mt-5">
-
-        @foreach ($posts as $post)
-            <x-post-card :url="'#'" :image="'https://via.placeholder.com/600x400'" :category="'General'" :title="$post['title']" :
-                :views="$post['views']" :excerpt="$post['content']" />
-        @endforeach
-
+        @forelse ($posts as $post)
+            <x-post-card
+                :url="route('posts.show', $post->id)"
+                :image="$post->image_url"
+                :category="$post->category->name ?? 'General'"
+                :title="$post->title"
+                :views="0"
+                :excerpt="$post->excerpt"
+            />
+        @empty
+            <p class="text-center">No posts found.</p>
+        @endforelse
     </div>
 @endsection
-
